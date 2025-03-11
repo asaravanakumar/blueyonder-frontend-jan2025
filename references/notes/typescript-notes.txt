@@ -1,0 +1,122 @@
+
+TypeScript
+----
+  Prereq: Data typing in JS 
+
+  Data types: 
+    1. Primitive Data types  
+        string, number, boolean, undefined, null, symbol (es2015), big int(es2017)
+
+    2. Non-Primitive data types
+        object, array, regexp 
+
+  Types of lang (around data typing)
+  ---
+    1. Strictly typed / Strongly typed
+        Examples: Java, .Net, C++, TS
+        Syntax in Java: 
+          int x = 10;
+          x = 100; //valid
+          x = true; // error -- compilation error
+
+    2. Loosely typed / Dynamically typed
+        Examples: JS, PHP, Python
+        Syntax in JS
+          var x = 10; // valid 
+          x = 100; // valid 
+          x = true; // valid 
+          x = "Arun"; // valid
+          x = undefined
+          x = null;
+          x = [];
+          x = {};
+          x = function() {
+
+          }
+
+
+    Problems in JS 
+    ---
+      * before es2015 -- it was not object oriented 
+      * not friendlier to java dev
+      * loosely typed itself is a problem.
+
+TypeScript
+----
+  * Microsoft built in 2012
+  * Object oriented 
+  * friendlier to Java, dot net developers 
+  * TS = JS + Datatyping 
+  * TS is a superset of JS 
+
+Syntax in TS
+---
+  1. Explicit Datatyping
+    var x: number = 10;
+    x = 100; // valid 
+    x = true; // error 
+
+    ?
+    var myName: string = "Saravana";
+    myName = 12301;
+
+    var isLoggedIn: boolean = true; 
+    var u: undefined;
+    var n: null = null;
+
+  2. Implicit Datatyping / Type Inference
+    var y = 20; // valid
+    y = true; // error
+    y = "Saravana"; //error
+
+
+  Any type
+  ----
+    var z; // valid 
+    z = 100; // valid 
+    z = true; // valid
+
+    var a: any;
+    a = 10;
+    a = true;
+
+  Array
+  ----
+    var colors1: string[] = ["red", "green"];
+    var colors2: Array<string> = ["red", "green"];
+
+
+  Objects
+  --- 
+    var employee = {
+      id: 1,
+      name: 'John',
+      email: 'j@k.com'
+    }
+
+
+  functions
+
+
+
+  Execution
+
+
+  NodeJS Ecosystem a.k.a npm
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+

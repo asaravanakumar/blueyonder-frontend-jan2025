@@ -1,0 +1,83 @@
+NPM 
+----
+  1. Project Dependencies
+      * some packages are needed for the app's functionality to run 
+
+      Ex: react, bootstrap, tailwind, jquery
+
+      commands
+      ---
+        npm i react 
+        npm install react 
+        npm install react --save 
+        npm i react -S 
+
+        npm update react 
+        npm uninstall react
+
+  2. Dev Dependencies
+      * some packages are needed just for the app to be developed. These are needed just for the app to be developed.
+      
+      Ex: TypeScript, SASS
+
+      commands
+      ---
+        npm i typescript --save-dev 
+        npm i typescript -D
+        
+        npm update typescript -D
+        npm uninstall typescript -D
+
+      
+  3. Global Dependencies (System-wide installation)
+      * some packages you may need to install system wide
+
+      Ex: Express-Generator, nodemon
+
+======
+
+
+Webapps
+----
+  1. Server Side Rendering Apps (SSR)
+      * pages will refresh
+
+  2. Client Side Rendering Apps (CSR) = SPA + RESTful API 
+      * pages will NOT refresh 
+
+      SPA (Single Page Apps)
+      ------
+        Characteristics
+        ----  
+          1. Pages should not refresh 
+          2. URL should change 
+          3. Browser History should be maintained w/o page refresh 
+          4. Header and Footer should NOT be loaded again and again 
+          5. Section in between header and footer should be updated
+          6. Active menu should be set 
+          7. Page Title should be changed
+
+      SPA Libraries / Frameworks 
+      ------
+        #1 React JS (library)
+        #2 Angular (Framework)
+        #3 VueJS (Framework)
+        #$ Svelte 
+
+
+      Softwares Reqd:
+      ----
+        NodeJS v16 or v18 vs v20  
+        VS code Editor 
+        Browser 
+
+      Create a react project?
+      ----
+        * Using a tool called create-react-app
+          npx create-react-app my-react-app
+
+        1. without typescript (HERE TO LEARN)
+             npx create-react-app my-react-app
+
+        2. with typescript 
+             npx create-react-app my-react-app --template typescript
