@@ -1,0 +1,63 @@
+
+ReactJS 
+---
+  1. Quick Intro 
+  2. React React Project 
+      * file walkthru 
+      * how react apps are running? 
+          npm start 
+
+  3. Components
+  4. JSX 
+  5. Props (1 hour)
+  6. States (1 hour)
+  7. Events (1 hour)
+  8. Lists and Keys (1 hour)
+  9. Conditional Rendering (30 mins)
+  10. Styles (1 hour)
+
+
+  11. Routing (1.5 hours)
+  12. Integrating third party tools (bootstrap) 
+  13. REST API (CR...) (4 hours)
+  15. Context API (3 hours)  -- Leave it 
+  16. Fragment
+  17. Build and Deployment (30 mins)
+
+
+
+Components
+---
+  Reusable block of code
+  1. Functional Components
+    1.1 Functional comp with Named Fn 
+    1.2 Functional comp with Anonymous fn 
+    1.3 Functional comp with Arrow Fn (Recommended)
+  2. Class Components (about to be Deprecated -- NOT Recommended any more)
+
+
+JSX Limitations 
+-------
+  * Will look like HTML. But really not.
+  * All tags must be self-closed or separately-closed 
+  * class attribute in element should become className
+  * JSX expressions must have one parent element.
+
+Install Chrome Extn:
+ https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+
+
+Cross Component Communication
+------
+  1. Parent to Child Comp Communication
+      using Props
+  2. Child to Parent Comp Communication
+      using Props with Events and callback fn 
+  3. Any to Any Comp Communication 
+      1. using React context API (or)
+      2. using Redux / MobX / Zustand / Recoil (third party framework)
+
+
+Refer this project:
+https://github.com/arunprabu/netflix-plus-app-react-april-batch1
+
