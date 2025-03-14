@@ -1,0 +1,846 @@
+Frontend
+
+
+	WebApp / WebPage
+
+			HTML			- Structural Layer
+
+			CSS				- Presentation Layer
+			Bootstrap		- Responsive Design
+			Tailwind
+
+			Javascript		- Interaction Layer
+
+	Types of WebApp
+
+			Static
+			Dynamic
+
+	Layout Types
+
+			Fixed Layout
+			Fluid Layout
+
+	Tag Types
+			
+			Semantic Tags	- header, footer, section
+			Non Semantic Tags - p, h, a
+
+			Inline Tags - a, span
+			Block Tags - p, h1-h6, li, div
+
+	<html>	
+		<head>
+			<title> </title>
+			<meta> </meta>
+		</head>
+
+		<body>
+			<header> </header>
+			<main> </main>
+			<footer> </footer>
+		</body>
+	</html>
+
+	Tags
+		attribute
+		Child 
+		
+		div
+		a
+		button
+		span
+
+		p
+
+		h1
+		h2
+		..
+		h6
+
+		ol
+		ul
+		li
+
+		form
+		input
+		label
+		textarea
+		select
+		option
+
+		image
+		picture
+			
+		table
+
+		audio
+		video
+		
+
+	CSS (Cascading Style Sheets)
+
+	1. Inline Style		<p id=“paragraph” class=“paragraphCls style=“color: blue; font-family: Arial”>
+	2. Internal Style	<head> <style> </style> </head>
+	3. External Style	<head> <link rel=“stylesheet” src=“./assets/main.css” /> </head>
+
+	Selectors
+	
+	1. Element Selector			p {color: blue; font-size: 12px}
+	2. Id Selector					#paragraph {color: blue; font-size: 12px}
+	3. Class Selector				.paragraphCls {color: blue; font-size: 12px}
+	4. Combinator Selector	p .paragraphCls {color: blue; font-size: 12px}
+	5. Attribute Selector		input[’type’]
+	6. Pseudo Selector			a:hover
+	7. Descendant Selector    div > p
+	8. Universal Selector		* {color: blue; font-size: 12px}
+
+	
+	Box Model
+	
+		content
+		padding
+		border
+		margin
+
+	width = content width+ padding + border + margin
+	height = content height+ padding + border + margin
+
+	Display
+
+		none
+		block
+		inline
+		inline-block
+		flex
+			3 cols
+		grid
+
+		4 rows
+		3 cols
+
+	Position
+
+		static			
+		fixed
+		relative
+		absolute
+		sticky
+		
+	Media Queries
+
+	Mobile First vs Desktop First Responsive Design
+
+	font-size: 12px
+	color: blue
+
+	@media only screen and (min-width: 576) {.  // <576px
+		
+		font-size: 14px
+		color: yellow
+	}
+
+	@media only screen and (max-width: 576) and (min-width: 992) {.  // >576px and <992px
+		
+		font-size: 14px
+		color: yellow
+	}
+	@media only print and (features) {}
+	@meida all
+
+	Bootstrap
+
+	Bootstrap Integration
+
+	1. Download Bootstrap CSS and JS files and refer
+	2. Add Boostrap CDN links (css and js) in the HTML
+	3. Install as NPM package
+
+	Grid Model
+
+	12 columns
+	
+	Components
+
+	Container
+	
+	Button
+	Navbar
+	Card
+	Model
+	Accordion
+	Carousel
+	Spinner
+	Progress Bar
+	Alerts
+	Badges
+	Forms
+	Tooltips
+	Tables
+
+	Responsive Design
+	
+	xs sm md lg xl xxl
+
+	text-sm-centered text-md-start text-lg-end
+
+	cols-sm-6 cols-md-4 cols-lg-2 
+
+	
+	Javascript		- Interaction Layer
+
+	Background & History
+
+	Data Types
+	
+	Control Structures
+	
+	Loops
+		for…of
+		for..in
+
+	Arrays
+
+	Functions
+		Named Function
+		Anonymous Function
+		Self Invoking / IIFE
+		Arrow Function
+
+	Objects
+		using Object Literal
+		using Object class
+		using Constructor Function
+		using Class
+	
+		class Account {
+
+			constructor(id, type, balance) {
+				this.id = id
+				this.type = type
+				this.balance = balance
+			}
+
+			// setter & getter methods
+		}
+	
+	Hoisting
+		- Variable Hoisting -> var support | let or const no support
+		- Function Hoisting
+
+	Modules
+
+		index.js
+	
+			import {Render} from ./app.js
+			render();
+
+		app.js
+
+			export Render function render() {
+
+			}
+
+	Node Ecosystem
+
+		Node JS - Runtime
+		NPM	- Node Package Manager
+
+		npm init
+		npm install
+		npm list
+		npm update
+
+		package.json
+			- project info
+			- dependencies
+
+		package-lock.json
+
+		node_modules
+		
+		
+	Typescript
+
+		JS + Typing
+		
+		var id = 123;
+		id = ‘abc’;
+
+		var id: number;
+		var id: string;
+		var id: number | string;
+		var id: any;
+
+		let account = {
+			id: 100,
+			type: ‘Savings’,
+			balance: 5000.0
+		}
+
+		let account: {id: number, type: string, balance: number} = {
+			id: 100,
+			type: ‘Savings’,
+			balance: 5000.0
+		}
+
+		type AccountType = {
+			id: number, 
+			type: string,
+		 	balance: number
+		}
+
+		interface AccountInterface {
+			id: number, 
+			type: string,
+		 	balance: number
+		}
+
+		let account:  AccountType = {
+			id: 100,
+			type: ‘Savings’,
+			balance: 5000.0
+		}
+
+		let account:  AccountInterface = {
+			id: 100,
+			type: ‘Savings’,
+			balance: 5000.0
+		}
+		
+		function compute(x: number, y: number): number {
+			return x + y;
+		}
+		
+		function print(msg: string): void {
+			console.log(string);
+		}
+
+		class Account {
+
+			private id: number;
+			private type: string;
+			private balance: number;
+
+			constructor(id: number, type: string, balance: number) {
+				this.id = id;
+				this.type = type;
+				this.balance = balance;
+			}
+
+			function checkBalance(): number {
+				return this.balance();
+			}
+		}
+
+		main.ts
+
+		npm install typescript -g
+
+		tsc main.ts	=> main.js
+		node main.js
+
+		Babel
+		ES7 => ES5
+
+
+		SPA
+			1. Page should not refresh [DONE]
+			2. URL should change [DONE]
+			3. History should be maintained w/o page refresh [DONE]
+			4. Header and Footer should be intact [DONE]
+			5. Contents should be updated b/w Header and Footer section [DONE]
+			6. Active menu should be set [DONE]
+			7. Title should change				
+
+		1. React JS
+		2. Angular
+		3. Vue JS
+		4. Svelte
+
+		Pre-Reqs:
+			- HTML / CSS / JS / TS
+			- Bootstrap / Tailwind
+			- Node / NPM Ecosystem
+
+		Build Tools / Bundler
+				
+			Webpack
+
+			Vite
+				- HMR
+				- Native ES libraries
+				- minimalistic config
+
+		React JS
+
+			Webpack
+				Webpack + JS [DONE]
+				Webpack + TS [DONE]
+
+				npx create-react-app <app-name>
+				npx create-react-app <app-name> —template typescript
+
+				npm install
+				npm start
+
+				http://localhost:3000
+
+			Vite
+				Vite + JS [DONE]
+				Vite + TS [DONE]
+
+				npm create vite@latest
+					- project name
+					- framework
+					- language
+
+				npm install
+				npm run dev
+		
+				http://localhost:5173
+
+			Folder Structure:
+
+				Webpack + JS
+
+				react-js-webpack-app
+					|
+					|__ public
+							|__ index.html
+							|__ favicons / logos
+					|__ src
+							|__ index.js -> entry point / react-dom
+							|__ index.css
+							|__ App.js -> main content
+							|__ App.css
+							|__ components
+							|__ pages
+							|__ layouts
+							|__ styles
+							|__ utils
+					|__ package.json
+					|__ package-lock.json
+
+					|__ node_modules (created after ‘npm install’ and don’t commit into SCM)
+
+				Webpack + TS
+
+				react-ts-webpack-app
+					|
+					|__ public
+							|__ index.html
+							|__ favicons / logos
+					|__ src
+							|__ index.tsx -> entry point / react-dom
+							|__ index.css
+							|__ App.tsx -> main content
+							|__ App.css
+							|__ components
+							|__ pages
+							|__ layouts
+							|__ styles
+							|__ utils
+					|__ package.json
+					|__ package-lock.json
+					|__ tsconfig.json
+
+					|__ node_modules (created after ‘npm install’ and don’t commit into SCM)
+
+				Vite + JS
+
+				react-js-vite-app
+					|
+					|__ public
+	
+							|__ favicons / logos
+					|__ src
+							|__ main.jsx -> entry point / react-dom
+							|__ index.css
+							|__ App.jsx -> main content
+							|__ App.css
+							|__ assets
+							|__ components
+							|__ pages
+							|__ layouts
+							|__ utils
+					|__ index.html
+					|__ package.json
+					|__ package-lock.json
+					|__ vite.config.json
+					|__ eslint.config.json
+
+					|__ node_modules (created after ‘npm install’ and don’t commit into SCM)
+
+				Vite + TS
+
+				react-ts-vite-app
+					|
+					|__ public
+	
+							|__ favicons / logos
+					|__ src
+							|__ main.tsx -> entry point / react-dom
+							|__ index.css
+							|__ App.tsx -> main content
+							|__ App.css
+							|__ assets
+							|__ components
+							|__ pages
+							|__ layouts
+							|__ utils
+					|__ index.html
+					|__ package.json
+					|__ package-lock.json
+					|__ vite.config.json
+					|__ eslint.config.json
+					|__ tsconfig.json
+
+					|__ node_modules (created after ‘npm install’ and don’t commit into SCM)
+
+
+			IDE / Browser Extensions:
+
+				ES7 / React / Redux / GraphQL Snippets (VS Code)
+				React Developer Tools (Chrome)
+				Bootstrap IntelliSense (VS Code)
+				
+			Concepts:
+
+				Component
+
+						import
+						component definition
+						export
+
+						- Functional Component
+							- Named Function
+							- Anonymous Function
+							- Arrow Function
+
+							const Header: React.FC = () => {
+
+								return (
+									// JSX
+								);
+							}
+							export default Header;
+
+						- Class Component [Deprecated after 16.7 release]
+
+						class Header extends React.Component{
+							render() {
+
+							}
+						}
+						
+				JSX (JavaScript XML)
+
+				 - smiliar but stricter than HTML
+				- should have closing tags
+				- enclosed with parent tag if more than one element is there
+				- can enclose javascript within curly {}
+				- class attribute is referred as className
+				- style attribute will have value enclosed with {{}}
+				
+				const Header = () => {
+
+								// variables
+								// constants
+								// functions
+								const topic = ‘React’;
+
+								return (
+									// JSX
+									<div id=“header”>
+										<p> Frontend Training {topic}</p>
+									</div>
+								);
+							}
+				
+				Styling Components
+
+					Inline Styling
+					External Styling
+
+					const Header = () => {
+
+								return (
+									<div id=“header” style={{color: ‘red’, font-size: ’12px’}}>
+										<p> Frontend Training </p>
+									</div>
+								);
+							}
+				
+					Header.js
+
+					const Header = () => {
+
+								return (
+									<div className=“header”>
+										<p> Frontend Training </p>
+									</div>
+								);
+							}
+				
+					Header.css
+
+						.header {
+							background-color: ‘lightgreen’,
+							text-align: ‘center’
+						}
+
+				Bootstrap Integration
+
+					npm i bootstrap
+					npm i react-bootstrap (Optional)
+					
+					import bootstrap css / js files (enough to have as part of App.js / Main.tsx)
+					refer bootstrap classe names to apply the styles
+
+				Conditional Rendering
+
+					const Header = (isFrontEnd) => {
+		
+								return (
+									<div id=“header” }>
+										<p> {isFrontEnd ? ‘Frontend Training’ : ‘Backend Training’} </p>
+									</div>
+								);
+							}
+
+				Rendering Lists
+
+					map
+					key - unique identifier to differentiate the items from siblings
+
+
+
+				Props
+				
+					Helps to pass data from parent to child component
+
+				State
+
+					Helps to store information at component level
+
+					const Header = (isFrontEnd) => {
+
+							const [topic, setTopic] = useState(‘FrontEnd’)
+
+							function handleClick() {
+								setTopic(‘BackEnd’);
+							}
+		
+								return (
+									<div id=“header” }>
+										<button onClick=‘handleClick’> Switch Topic </button>
+										<p> {topic} </p>
+									</div>
+								);
+							}
+
+			
+				Hooks
+					
+					provides additional functionalities to functional components
+					- useState
+					- useEffect
+					- useContext
+
+				Cross Component Communication
+
+					- Parent to Child (props)
+					- Child to Parent	(Event Handling with Callbacks)
+					- Siblings (Shared State)
+					- Any to Any Component (Context API / RedUx)
+
+			
+				React Routers
+					
+ 					- Helps to navigate to different pages
+
+					STEP 1: Install react router module
+					
+								npm i react-router-dom
+			
+					STEP 2: Add <BrowserRouter> in the main
+
+					STEP 3: Add routes inside <BrowserRouter> in the main
+
+								http://localhost:5173
+
+								/ 				-		<HomePage>
+								/netflix		-		<Netflix>
+								/crud			- 		<CrudListPage>
+								/products	-		<ProductListPage>
+
+						<BrowserRouter>
+							<Routes>
+								<Route path=“” element={ } />
+								<Route path=“” element={ } />
+								<Route path=“” element={ } />
+							</Routes>
+						</BrowserRouter>
+					
+					STEP 4: Use <Link> instead of <a>
+
+					STEP 5: USE <NavLink> instead of <a> in nav bar
+
+					
+				
+				React Forms
+
+					- react-hook-form
+					
+
+				Backend API Integration
+
+					- Ajax | Fetch API
+					- Axios (Recommended)
+
+					STEP 1: Install react-axios module
+
+							npm i axios
+
+					STEP 2: Make API calls within useEffect hook
+
+						useEffect( ()=> {
+
+						}, [ ])
+						
+					STEP 3: Perform GET API call to fetch the data
+
+								axios
+									.get(“http://localhost:8111/productapp/api/products”)
+									.then( (res) => { console.log(res.data})
+									.catch( (err) => { console.log(err) }
+									.finally( () => { console.log(“cleanup”)} )
+
+					STEP 4: Store response data into state variable and refer from JSX
+
+								const [products , setProducts] = useState([ ])
+
+								axios
+									.get(“http://localhost:8091/products”)
+									.then( (res) => { setProducts(res.data) )
+									.catch( (err) => { console.log(err) }
+									.finally( () => { console.log(“cleanup”)} )
+					
+					STEP 5: Refer the state variable inside JSX to render the details
+
+							const productListPage = ( ) => {
+								const [products , setProducts] = useState([ ])
+
+								useEffect( ()=> {
+	
+									axios
+										.get(“http://localhost:8091/products”)
+										.then( (res) => { setProducts(res.data) )
+										.catch( (err) => { console.log(err) }
+										.finally( () => { console.log(“cleanup”)} )
+
+								}, [ ])
+
+								return (
+									<div>
+										<p>{products.map( // Logic to render)}</p>
+									</div>
+								)
+							}
+								
+
+				Any to Any Component
+						
+					Context API
+						- Create Context
+						- Create Context Provider
+						- Wrap App Components with Context Provider
+						- Access context with useContext hook and update the state
+						- Access context with useContext hook and subscribe for state changes
+
+					Third Party
+
+						0. Flux (Deprecated)
+						1. Classic Redux	(Not Recommended)
+						2. Redux ToolKit (RTK) - Recommended
+						3. Zustand
+						4. Recoil
+						5. MobX / Jotai
+
+
+				Redux
+
+					Store	
+						- single source of truth
+						- only one store per application
+						
+						- State
+						- Reducers
+						- Middleware (Thunk / Saga)
+					
+					Actions
+						- operatations performed on the state
+						- events to trigger the reducer
+
+					Reducers
+						- updating the state based on the actions
+
+					Slice (part of RTK)
+						- Combinations of actions and reducers
+						- Piece of state managed in the Store
+
+					Dispatch
+						- notifies the store to update the specific state
+
+					Selector
+						- filters or selects a specific state/slice from the store
+
+
+				Redux ToolKit (RTK)
+
+					- less boilerplate code
+					- better support for typescript
+
+					1. Create Redux Toolkit template project with Vite & TS [Recommended if need to create react redux project from scratch]
+
+						npx degit reduxjs/redux-templates/packages/vite-template-redux react-redux-labs
+
+				react-redux-demo-app
+					|
+					|__ public
+							|__ favicons / logos
+					|__ src
+							|__ main.tsx -> entry point / react-dom
+							|__ index.css
+							|__ App.tsx -> main content
+							|__ App.css
+							|__ assets
+							|__ app
+									|_ store.ts
+									|_ hooks.ts
+									|_ createAppSlice.ts
+							|__ features
+									|_ counters
+									|_ quotes
+									|_ users
+							|__ components
+							|__ pages
+							|__ layouts
+							|__ utils
+					|__ index.html
+					|__ package.json
+					|__ package-lock.json
+					|__ vite.config.json
+					|__ eslint.config.json
+					|__ tsconfig.json
+
+					|__ node_modules (created after ‘npm install’ and don’t commit into SCM)
+
+
+					2. Existing App to support Redux
+
+						npm i react-redux
+						npm i @reduxjs/toolkit
+					
+				Authentication
