@@ -38,27 +38,47 @@ function Login() {
   };
 
   return (
-    <form
-      onSubmit={(event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        const form = event.currentTarget;
-        const email = form.querySelector<HTMLInputElement>("#email");
-        const password = form.querySelector<HTMLInputElement>("#password");
-        if (email && password) {
-          handleSubmit(email, password);
-        }
-      }}
-    >
-      <label htmlFor="email">Email</label>
-      <br />
-      <input type="email" id="email" name="email" />
-      <br />
-      <label htmlFor="password">Password</label>
-      <br />
-      <input type="password" id="password" name="password" />
-      <br />
-      <input type="submit" value="Submit" />
-    </form>
+    <div className="d-flex justify-content-center align-items-center vh-100">
+      <form
+        className="border p-4 rounded shadow"
+        onSubmit={(event: FormEvent<HTMLFormElement>) => {
+          event.preventDefault();
+          const form = event.currentTarget;
+          const email = form.querySelector<HTMLInputElement>("#email");
+          const password = form.querySelector<HTMLInputElement>("#password");
+          if (email && password) {
+            handleSubmit(email, password);
+          }
+        }}
+      >
+        <h2 className="text-center mb-4">Login</h2>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="form-control"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            className="form-control"
+          />
+        </div>
+        <button type="submit" className="btn btn-primary w-100">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }
 export default Login;

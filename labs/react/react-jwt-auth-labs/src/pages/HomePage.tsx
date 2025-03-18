@@ -34,9 +34,13 @@ function HomePage() {
   console.log("2. Program Ended");
 
   return (
-    <div>
-      <div>LOGIN SUCCESS!!!</div>
-      <button onClick={clearAuthToken}>Logout</button>
+    <div className="d-flex flex-column align-items-center justify-content-center vh-100">
+      <div className="text-center mb-4">LOGIN SUCCESS!!!</div>
+      <div className="mt-3">
+        <button className="btn btn-danger" onClick={clearAuthToken}>
+          Logout
+        </button>
+      </div>
     </div>
   );
 }
