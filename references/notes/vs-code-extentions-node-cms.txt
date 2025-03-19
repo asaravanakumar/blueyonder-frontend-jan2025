@@ -1,0 +1,11 @@
+VS Code Editor Extensions.
+
+1. Live Server
+2. Live Preview
+3. Bootstrap IntelliSense
+4. Code Runner
+5. ES7 React/Redux/GraphQL/React Native Snippets
+
+Browser Extension.
+
+1. React Developer Tools

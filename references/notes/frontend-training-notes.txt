@@ -241,6 +241,12 @@ Frontend
 
 			}
 
+	Promises
+
+  Async Await
+
+	Ajax
+
 	Node Ecosystem
 
 		Node JS - Runtime
