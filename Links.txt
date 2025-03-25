@@ -9,3 +9,7 @@ https://forms.gle/xw6QgAHEAUnJMUfx7
 Assessment #9: React JS
 
 https://forms.gle/HPhccCjhkAoCFHSD7
+
+Assessment #10: DevOps - Docker, K8s and GitHub Actions
+
+https://forms.gle/d9yLt8zejg31proj8
